@@ -1,12 +1,17 @@
-<form (ngSubmit)="auth(authForm.value)" [formGroup]="authForm">
-  <label for="email">email</label>
-  <input type="text" id="email" [formControl]="authForm.controls['email']" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
+<form (ngSubmit)="auth(authForm.value)" [formGroup]="authForm" *ngIf = "!success">
+  <input type="text"
+         id="email"
+         [formControl]="authForm.controls['email']"
+         placeholder="email"
+         pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
   <p *ngIf="this.emailError()" class="missingField">
     Email is missing or Invalid.
   </p>
 
-  <label for="pass">password</label>
-  <input type="password" id="pass" [formControl]="authForm.controls['pass']" />
+  <input type="password"
+         id="pass"
+         [formControl]="authForm.controls['pass']"
+         placeholder="password" />
   <p *ngIf="authForm.controls['pass'].hasError('required') && authForm.controls['pass'].touched" class="missingField">
     Password is missing.
   </p>

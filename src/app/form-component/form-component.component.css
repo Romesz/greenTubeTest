@@ -1,13 +1,7 @@
-label, input {
+input {
     display: block;
     width: 100%;
-}
-
-label[for=pass] {
     margin-top: 10px;
-}
-
-input {
     padding: 3px;
     border-radius: 3px;
 }
@@ -22,6 +16,8 @@ p {
 
 button {
     margin: 10px auto;
+    display: block;
+    width: 50%;
 }
 
 .success {
@@ -31,8 +27,7 @@ button {
     -webkit-animation: success 3s;
     opacity: 0;
     margin: 100px auto;
-    width: 55%;
-    min-width: 165px;
+    width: 250px;
     text-align: center;
 }
 
