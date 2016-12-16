@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -8,8 +8,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class FormComponentComponent {
 
-  private authForm : FormGroup;
-  private success:boolean;
+  public authForm: FormGroup;
+  public success: boolean;
 
   constructor(fb: FormBuilder) {
     this.success = false;
@@ -20,15 +20,15 @@ export class FormComponentComponent {
     });
   }
 
-  auth(value: any) {
+  processLogin(value: any) {
     this.success = true;
     console.log(value);
     // TODO: process the data
   }
 
-  emailError() {
+  isEmailValid() {
     let email = this.authForm.controls['email'];
-    if ((!email.valid ||email.hasError('required')) && email.touched) {
+    if ((!email.valid || email.hasError('required')) && email.touched) {
       return true;
     } else {
       return false;

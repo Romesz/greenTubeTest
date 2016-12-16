@@ -1,10 +1,10 @@
-<form (ngSubmit)="auth(authForm.value)" [formGroup]="authForm" *ngIf = "!success">
+<form (ngSubmit)="processLogin(authForm.value)" [formGroup]="authForm" *ngIf="!success">
   <input type="text"
          id="email"
          [formControl]="authForm.controls['email']"
          placeholder="email"
          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
-  <p *ngIf="this.emailError()" class="missingField">
+  <p *ngIf="this.isEmailValid()" class="missingField">
     Email is missing or Invalid.
   </p>
 
