@@ -23,3 +23,47 @@ p {
 button {
     margin: 10px auto;
 }
+
+.success {
+    position: absolute;
+    bottom: 0;
+    animation: success 3s;
+    -webkit-animation: success 3s;
+    opacity: 0;
+    margin: 100px auto;
+    width: 55%;
+    min-width: 165px;
+    text-align: center;
+}
+
+.success > p {
+    background-color: #312f31;
+    height: 50px;
+    border-radius: 10px;
+    padding-top: 14px;
+    color: #FFF;
+}
+
+@keyframes success {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes success {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

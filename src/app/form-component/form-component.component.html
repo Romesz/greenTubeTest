@@ -12,6 +12,7 @@
   </p>
   <button type="submit" [disabled]="!authForm.valid">send</button>
 </form>
-<p *ngIf = "success">
 
-</p>
+<div *ngIf = "success" class="success">
+  <p>Loggin successful</p>
+</div>
