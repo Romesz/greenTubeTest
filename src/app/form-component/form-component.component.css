@@ -1,0 +1,25 @@
+label, input {
+    display: block;
+    width: 100%;
+}
+
+label[for=pass] {
+    margin-top: 10px;
+}
+
+input {
+    padding: 3px;
+    border-radius: 3px;
+}
+
+p {
+    margin: 0;
+}
+
+.missingField {
+    color: #880d0d;
+} 
+
+button {
+    margin: 10px auto;
+}
