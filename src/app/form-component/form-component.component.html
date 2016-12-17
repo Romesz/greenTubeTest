@@ -4,7 +4,7 @@
          [formControl]="authForm.controls['email']"
          placeholder="email"
          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" />
-  <p *ngIf="this.isEmailValid()" class="missingField">
+  <p *ngIf="this.isEmailInValid()" class="missingField">
     Email is missing or Invalid.
   </p>
 

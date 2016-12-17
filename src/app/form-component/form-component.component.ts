@@ -26,7 +26,7 @@ export class FormComponentComponent {
     // TODO: process the data
   }
 
-  isEmailValid() {
+  isEmailInValid() {
     let email = this.authForm.controls['email'];
     if ((!email.valid || email.hasError('required')) && email.touched) {
       return true;

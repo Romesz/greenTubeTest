@@ -7,3 +7,7 @@ for testing:
 * http://localhost:4200/
 
 * ng build --prod (building production version)
+
+
+Adding Unit test coverage:
+* ng test --code-coverage 
