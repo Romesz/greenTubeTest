@@ -5,10 +5,18 @@ describe('green-tube-test App', function() {
 
   beforeEach(() => {
     page = new GreenTubeTestPage();
+    page.navigateTo();
   });
 
-  it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+  it('should display message saying GreenTube test', () => {
+    expect(page.getParagraphText()).toEqual('GreenTube test');
+  });
+
+  it('should test button disability TRUE', () => {
+    expect(page.isButtonDisabled(true)).toBeTruthy();
+  });
+
+  it('should test button disability FALSE', () => {
+    expect(page.isButtonDisabled(false)).toBeFalsy();
   });
 });
